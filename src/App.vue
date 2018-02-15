@@ -1,9 +1,8 @@
 <template>
   <div class="container">
+      <app-header></app-header>
       <div class="row">
-          <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-              <app-header></app-header>
-              <hr>
+          <div class="col-xs-12">
               <router-view></router-view>
           </div>
       </div>
@@ -21,5 +20,7 @@ export default {
 </script>
 
 <style>
-
+    body {
+        padding: 30px;
+    }
 </style>
