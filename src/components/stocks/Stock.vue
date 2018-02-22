@@ -22,8 +22,6 @@
                         @click="buyStock"
                         :disabled="quantity <= 0 || !Number.isInteger(quantity)"
                         >Buy</button>
-                    {{ quantity <= 0 }}
-                    {{ !Number.isInteger(quantity) }}
                 </div>
             </div>
         </div>
@@ -47,6 +45,7 @@
                     quantity: this.quantity
                 };
                 console.log(order);
+                this.$store.dispatch('buyStock', order);
                 this.quantity = 0;
             }
         }
